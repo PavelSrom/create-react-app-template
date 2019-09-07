@@ -1,14 +1,15 @@
 import React, { Component } from 'react'
+
 import Headline from './components/Headline'
 
-class App extends Component {
+export default class App extends Component {
   /**
    * Using this syntax just to see if babel plugin works
    *
    * @memberof App
    */
   state = {
-    name: 'React'
+    name: 'React',
   }
 
   /**
@@ -19,12 +20,12 @@ class App extends Component {
   changeName = () => this.setState({ name: 'REACT' })
 
   render() {
+    const { name } = this.state
+
     return (
       <div>
-        <Headline name={this.state.name} changeName={this.changeName} />
+        <Headline name={name} changeName={this.changeName} />
       </div>
     )
   }
 }
-
-export default App
