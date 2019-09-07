@@ -2,12 +2,20 @@ import React, { Component } from 'react'
 import Headline from './components/Headline'
 
 class App extends Component {
-  // using this syntax just to see if babel plugin works
+  /**
+   * Using this syntax just to see if babel plugin works
+   *
+   * @memberof App
+   */
   state = {
     name: 'React'
   }
 
-  // using this syntax just to see if babel plugin works
+  /**
+   * Using this syntax just to see if babel plugin works
+   *
+   * @memberof App
+   */
   changeName = () => this.setState({ name: 'REACT' })
 
   render() {
