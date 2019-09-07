@@ -1,11 +1,19 @@
 import React from 'react'
+import PropTypes from 'prop-types'
+
 import classes from './Headline.css'
 
-const headline = props => (
+const Headline = ({
+  name,
+}) => (
   <div>
-    <h1 className={classes.headline}>Hello {props.name}! :)</h1>
-    <button onClick={props.changeName}>Click me!</button>
+    <h1 className={classes.headline}>Hello {name}! :)</h1>
+    <button onClick={changeName}>Click me!</button>
   </div>
 )
 
-export default headline
+Headline.propTypes = {
+  name: PropTypes.string.isRequired,
+}
+
+export default Headline
